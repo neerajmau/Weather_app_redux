@@ -1,7 +1,0 @@
-.container{
-  background: url("../src/component/assets/background-img.jfif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
- min-height: 100vh;
-}

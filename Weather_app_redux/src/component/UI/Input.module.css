@@ -1,0 +1,22 @@
+.header-inner{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.search{
+    background-color: white;
+    border: none;
+    width: 60%;
+    padding: 10px;
+    margin: auto;
+}
+.search-button{
+    background-color: black;
+    border-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 12%;
+    cursor: pointer;
+}

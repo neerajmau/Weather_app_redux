@@ -28,7 +28,7 @@ export default App;
 
 
 
-// <Fragment>
+
 //   <div className="container">
 //     <BrowserRouter>
 //       <Routes>
@@ -37,4 +37,3 @@ export default App;
 //       </Routes>
 //     </BrowserRouter>
 //   </div>
-// </Fragment>

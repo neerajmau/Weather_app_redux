@@ -1,11 +1,10 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import { useDispatch } from 'react-redux';
 import { apiData } from '../../Actions/index';
 
 const useHttp = () => {
     const dispatch = useDispatch()
     const sendRequest = useCallback(async (requestConfig) => {
-        console.log("requestConfig", requestConfig)
         try {
             const response = await fetch(requestConfig)
             if (!response.ok) {
@@ -17,9 +16,7 @@ const useHttp = () => {
         } catch (err) {
             console.log(err.message)
         }
-    }
-
-    )
+    }, [])
 
     return {
         sendRequest

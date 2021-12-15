@@ -12,9 +12,10 @@ export default function FutureDataShow(props) {
     console.log("getDate", getData, searchvalue)
 
     const { sendRequest: fetchTasks } = useHttp();
-    const TempInfo = []
+
 
     const dataShow = async () => {
+        const TempInfo = []
         try {
             await fetchTasks(`https://api.openweathermap.org/data/2.5/forecast?q=${searchvalue}&units=metric&appid=4beffc863037e89f0f181d893d1cf79b`)
             const data1 = myState.apiData.filter((item) => {
@@ -45,10 +46,10 @@ export default function FutureDataShow(props) {
 
     useEffect(() => {
         dataShow()
-    }, [])
-    useEffect(() => {
+    }, [searchvalue])
+    // useEffect(() => {
 
-    }, [TempInfo])
+    // }, [TempInfo])
 
     console.log("object5", datashow)
 

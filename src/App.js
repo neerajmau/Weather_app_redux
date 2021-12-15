@@ -3,7 +3,7 @@ import { Fragment } from 'react/cjs/react.production.min';
 import './App.css';
 import LoadingSpinner from './component/UI/LoadingSpinner';
 
-import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // import Header from './component/Layout/Header';
 // import FutureDataShow from './component/Layout/FutureDataShow';
 

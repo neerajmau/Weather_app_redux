@@ -1,15 +1,13 @@
 import React, { Fragment } from "react";
 import classes from './FutureForecast.module.css';
 import { NavLink } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { FutureDate } from '../../Actions/index'
+import { useSelector } from "react-redux";
 
 
 const FutureForecast = ({ TempInfo }) => {
-    const dispatch = useDispatch()
-    const HandleDate = (date) => {
-        dispatch(FutureDate(date))
-    }
+    const myState = useSelector((store) => store.WeatherReducer)
+
+
     return (
         <>
             <div className={classes['future-forecast']}>
@@ -22,8 +20,8 @@ const FutureForecast = ({ TempInfo }) => {
                         return (
 
                             <Fragment>
-                                <NavLink to='/'></NavLink>
-                                <NavLink className={classes['weather-forecast-item']} to="FutureDataShow" onClick={() => HandleDate(date)}>
+
+                                <NavLink className={classes['weather-forecast-item']} to={`/FutureDataShow/${date}/${myState.searchvalue}`} >
                                     <div className={classes['future-date']}>{month} {day}</div>
                                     <img src={`http://openweathermap.org/img/wn/${curElement.weathermoodIcon}@2x.png`} alt="future-img" />
                                     <div className={classes['min-max-temp']}>Mood-{curElement.mood}</div>
@@ -44,3 +42,7 @@ const FutureForecast = ({ TempInfo }) => {
 };
 
 export default FutureForecast;
+
+
+
+// <Navigate className={classes['weather-forecast-item']} to={`/FutureDataShow/${date}`} onClick={() => HandleDate(date)}></Navigate>

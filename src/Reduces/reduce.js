@@ -1,13 +1,13 @@
 const initialState = {
     tempinfo: "Welcome to info",
     apiData: [],
-    futureDate: ""
+    searchvalue: "Delhi"
 }
 const WeatherReducer = (state = initialState, action) => {
     switch (action.type) {
         case "APIDATA": state.apiData = action.data
             return { ...state }
-        case "FUTUREDATE": state.futureDate = action.data
+        case "SEARCHVALUE": state.searchvalue = action.data
             return { ...state }
         default: return state;
     }

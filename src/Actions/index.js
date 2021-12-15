@@ -4,9 +4,9 @@ export const apiData = (res) => {
         data: res
     }
 }
-export const FutureDate = (res) => {
+export const searchValue = (res) => {
     return {
-        type: "FUTUREDATE",
+        type: "SEARCHVALUE",
         data: res
     }
 }
